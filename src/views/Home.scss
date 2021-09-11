@@ -1,21 +1,8 @@
 .home {
-	.logo {
-		height: 40vmin;
-		pointer-events: none;
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.logo {
-			animation: logo-spin infinite 20s linear;
-		}
-	}
-
-	@keyframes logo-spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
+	.locationSearchHolder {
+		width: 100%;
+		background-color: white;
+		padding: 0em 4em;
+		margin-top: -1px;
 	}
 }

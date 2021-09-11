@@ -3,16 +3,15 @@ import { NavLink } from 'react-router-dom'
 
 import './Navigation.scss'
 
-interface Props {
-
-}
-
-const Navigation: React.FC<Props> = props => {
-
+const Navigation: React.FC = () => {
+    let date = new Date()
     return (
         <nav className="navigation">
             <NavLink to="/" activeClassName="active" exact>
-                Home
+                {date.toLocaleDateString('en-US', { weekday: 'long' })}
+                , {date.getDay()} {date.getMonth()} {date.getFullYear() + " "} 
+                 | { date.getHours()} : {date.getMinutes()}
+
             </NavLink>
             <NavLink to="/locations" activeClassName="active">
                 Locations
