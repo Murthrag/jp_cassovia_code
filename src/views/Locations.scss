@@ -58,6 +58,9 @@
 				justify-content: space-between;
 				align-items: center;
 			}
+			.cityTextAndTemperature p{
+				opacity: 0.6;
+			}
 		}
 		> a:hover {
 			background-color: #e0f9fa8c;

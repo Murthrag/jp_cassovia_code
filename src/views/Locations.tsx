@@ -17,8 +17,8 @@ const Locations: React.FC = () => {
 	const searchInput = useRef<HTMLInputElement>(null)
 	const [allLocationWithTemperature, setAllLocationWithTemperature] = useState<
 		Array<CityTempObj>
-		>(new Array<CityTempObj>())
-	
+	>(new Array<CityTempObj>())
+
 	const [displayLocations, setDisplayLocations] = useState<Array<CityTempObj>>(
 		new Array<CityTempObj>()
 	)
@@ -27,7 +27,7 @@ const Locations: React.FC = () => {
 	const inputSearch = () => {
 		let searchString = searchInput.current?.value || ''
 		setDisplayLocations(
-			allLocationWithTemperature.filter(( loc ) =>
+			allLocationWithTemperature.filter((loc) =>
 				loc.name.toLocaleUpperCase().includes(searchString.toLocaleUpperCase())
 			)
 		)
@@ -41,6 +41,7 @@ const Locations: React.FC = () => {
 	useEffect(() => {
 		let dataPromises: Array<Promise<void | Response>> = new Array<Promise<Response>>()
 
+		// eslint-disable-next-line array-callback-return
 		DefaultLocations.map((city) => {
 			dataPromises.push(
 				fetch(`https://api.openweathermap.org/data/2.5/weather
@@ -56,20 +57,20 @@ const Locations: React.FC = () => {
 					})
 			)
 		})
-		Promise.all(dataPromises).then(() => 
+		Promise.all(dataPromises).then(() =>
 			setDisplayLocations(
 				allLocationWithTemperature.sort((a, b): number =>
 					a.name.localeCompare(b.name.toString())
 				)
 			)
 		)
-	}, [])
+	}, [allLocationWithTemperature])
 
 	return (
 		<div className="locationSearchHolder">
 			<div className="locationSearch">
 				<input
-					autoFocus 
+					autoFocus
 					placeholder="Search city ..."
 					ref={searchInput}
 					onChange={inputSearch}
@@ -87,7 +88,7 @@ const Locations: React.FC = () => {
 					>
 						<div className="cityTextAndTemperature">
 							{locat.name}
-							<p>{locat.temperature ? locat.temperature + '°C' : ''}</p>
+							<p>{locat.temperature ? locat.temperature.toFixed(0) + ' °C' : ''}</p>
 						</div>
 					</Link>
 				</div>

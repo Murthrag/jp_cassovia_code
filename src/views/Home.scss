@@ -1,8 +1,29 @@
 .home {
-	.locationSearchHolder {
-		width: 100%;
-		background-color: white;
-		padding: 0em 4em;
-		margin-top: -1px;
+	width: 100%;
+	background-color: white;
+
+	.locationRow {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		a {
+			color: #000;
+			opacity: 0.65;
+			font-size: 2.5rem;
+			font-weight: 800;
+			text-decoration: none;
+			height: 3rem;
+			cursor: pointer;
+
+			img{
+                height: 2.5rem;
+			}
+		}
+	}
+
+	.weatherRows,
+	.forecastRow {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }

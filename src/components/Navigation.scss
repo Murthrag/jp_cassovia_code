@@ -1,24 +1,47 @@
 .navigation {
-    display: inline-block;
+    display: flex;
     vertical-align: middle;
-    background: transparent;
+    background-color: white;
     white-space: nowrap;
     border-radius: 2.5em 2.5em 0px 0px;
     width: 100%;
     box-shadow: -1px -15px 34px -2px rgba(0, 0, 0, 0.27);
 
+	.firstNav, .secondNav{
+        width: 50%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+	}
+	.firstNav{
+		flex-direction: row-reverse;
+		a {
+			text-align: right;
+			border-radius: 2.5em  0px 2.5em 0px;
+		}
+	}
+	.secondNav{
+		flex-direction: row;	
+		a {
+			text-align: left;
+			border-radius: 0px 2.5em 0px 2.5em;
+		}
+	}
+
 	a {
+		width: 100%;
 		color: #0000008f;
 		font-size: 0.9em;
 		font-weight: 800;
 		text-decoration: none;
-
+        height: 3rem;
 		cursor: pointer;
-		padding: 0.575em 0.65em;
-		display: inline-block;
-
+		padding: 0 1.5em;
+		line-height: 3rem;
+		
 		&.active {
-			color: #61dafb;
+			color: #1ba5eb;
+			background-color: #ecf7fd;
 		}
 	}
 }

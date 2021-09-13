@@ -3,10 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './views/Home';
 import Navigation from './components/Navigation';
 import Locations from './views/Locations';
+import background from "./assets/bck-image.jpg";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
+      <div className="bckImage" style={{ backgroundImage: `url(${background})` }}></div>
       <header className="App-header">
         <Navigation />
       </header>

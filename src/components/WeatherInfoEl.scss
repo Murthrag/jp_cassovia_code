@@ -1,0 +1,20 @@
+.weatherInfoCard {
+	flex: 1;
+	flex-basis: 33%;
+
+	h2 {
+		margin-top: 2rem;
+		margin-bottom: 0.3rem;
+		opacity: 0.8;
+	}
+	h3 {
+		opacity: 0.5;
+		font-weight: 400;
+		margin-top: 0;
+	}
+	i {
+		opacity: 0.3;
+		font-size: 3em;
+		padding-top: 4rem;
+	}
+}

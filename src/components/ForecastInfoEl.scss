@@ -1,0 +1,39 @@
+.forecastInfoCard {
+	flex: 1;
+	flex-basis: 33%;
+	margin-top: 2rem;
+
+	.forecastBox {
+		border-radius: 2.5rem;
+		box-shadow: 5px 11px 20px 0px rgba(0, 0, 0, 0.27);
+		width: 16rem;
+		margin: auto;
+
+		i {
+			opacity: 0.3;
+			font-size: 3em;
+			padding-top: 3rem;
+		}
+		h2 {
+			margin-top: 2rem;
+			margin-bottom: 0;
+			opacity: 0.8;
+		}
+		h3 {
+			padding: unset;
+			padding-bottom: 2rem;
+			margin-top: 0;
+			margin-bottom: 3rem;
+			opacity: 0.5;
+			font-weight: 400;
+
+			i {
+				position: relative;
+				opacity: 1;
+				font-size: 1.5em;
+				padding-top: unset;
+				top: 0.3rem;
+			}
+		}
+	}
+}

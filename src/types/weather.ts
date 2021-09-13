@@ -49,11 +49,6 @@ export interface WeatherToday {
 }
 
 export interface Forecast {
-	hourly: Array<{
-		dt: number
-		temp: number
-		weather: Array<{ id: number; description: string }>
-	}>
 	daily: Array<{
 		dt: number
 		temp: { min: number; max: number }
