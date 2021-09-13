@@ -45,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.8",
-    "webfont": "^11.2.26"
+    "@types/react-router-dom": "^5.1.8"
   }
 }

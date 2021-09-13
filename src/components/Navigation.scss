@@ -9,7 +9,7 @@
 
 	.firstNav, .secondNav{
         width: 50%;
-        height: 3rem;
+        height: 5rem;
         display: flex;
         align-items: center;
 	}
@@ -34,10 +34,10 @@
 		font-size: 0.9em;
 		font-weight: 800;
 		text-decoration: none;
-        height: 3rem;
+        height: 5rem;
 		cursor: pointer;
 		padding: 0 1.5em;
-		line-height: 3rem;
+		line-height: 5rem;
 		
 		&.active {
 			color: #1ba5eb;

@@ -4,6 +4,7 @@ import Home from './views/Home';
 import Navigation from './components/Navigation';
 import Locations from './views/Locations';
 import background from "./assets/bck-image.jpg";
+import './assets/font/Barlow-Light.ttf'
 
 function App() {
   return (

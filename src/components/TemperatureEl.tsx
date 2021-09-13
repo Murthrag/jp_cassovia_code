@@ -3,19 +3,19 @@ import React from 'react'
 import './TemperatureEl.scss'
 
 export interface ITemperatureEl {
-	temperature1: string
-	temperature2: string | undefined
+	tempMin: string
+	tempMax: string | undefined
 }
 
 const TemperatureEl: React.FC<ITemperatureEl> = (props) => {
-	return props.temperature2 ? (
+	return props.tempMax ? (
 		<div className="tempInfo">
-			<h5>{props.temperature1} °C</h5>
-			<h5>{props.temperature2} °C</h5>
+			<h5>{props.tempMin} °C <i className="wi wi-direction-down"></i></h5>
+			<h5>{props.tempMax} °C <i className="wi wi-direction-up"></i></h5>
 		</div>
 	) : (
 		<div className="tempInfo">
-			<h2>{props.temperature1} °C</h2>
+			<h2>{props.tempMin} °C</h2>
 		</div>
 	)
 }

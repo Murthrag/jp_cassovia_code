@@ -115,12 +115,12 @@ const Home: React.FC<Props> = (props) => {
 						data={undefined}
 					/>
 					<TemperatureEl
-						temperature1={weatherToday.temp.toFixed(0)}
-						temperature2={undefined}
+						tempMin={weatherToday.temp.toFixed(0)}
+						tempMax={undefined}
 					/>
 					<TemperatureEl
-						temperature1={weatherToday.temp_min.toFixed(0)}
-						temperature2={weatherToday.temp_max.toFixed(0)}
+						tempMin={weatherToday.temp_min.toFixed(0)}
+						tempMax={weatherToday.temp_max.toFixed(0)}
 					/>
 					<WeatherInfoEl
 						icon={'wi wi-humidity'}
